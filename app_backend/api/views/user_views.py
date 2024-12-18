@@ -27,3 +27,18 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
             data[k] =v
 
         return data
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+
+        token['username'] = user.username
+        token['message'] = "hello Bazarbag"
+
+        # ...
+
+        return token
+    
+
+
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
