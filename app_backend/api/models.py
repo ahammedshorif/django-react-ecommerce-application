@@ -1,6 +1,3 @@
 from django.db import models
 
 # Create your models here.
-# this is models.py
-# Hello world
-# this is comments
