@@ -26,4 +26,5 @@ urlpatterns = [
     path('',TemplateView.as_view(template_name='index.html')),
     path('api/users/',include('api.urls.user_urls')),
     path('api/products/',include('api.urls.product_urls')),
+    path('api/orders/',include('api.urls.order_urls')),
 ]
